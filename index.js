@@ -1,4 +1,4 @@
-colors = require('colors');
+var colors = require('colors');
 
 function makeRainbows(string) {
     console.log(colors.white(string));
@@ -14,3 +14,15 @@ function makeRainbows(string) {
 for (var i = 2; i < process.argv.length; i++){
   setInterval(makeRainbows, 1000, process.argv[i]);
 }
+
+//
+
+// var colors = require('colors');
+//
+// var line1 = process.argv[2];
+// var line2 = process.argv[3];
+// var line3 = process.argv[4];
+//
+//   console.log(line1.white);
+//   console.log(line2.cyan);
+//   console.log(line3.red);
