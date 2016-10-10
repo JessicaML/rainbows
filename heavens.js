@@ -4,33 +4,25 @@
 
 
 
-var LineByLineReader = require('line-by-line'),
-    lr = new LineByLineReader('through-heavens-eyes_txt.txt');
-
+var fs = require('fs');
 var colors = require('colors');
 
-
-console.log(lr);
-function readSong(lr) {
-  LineByLineReader.readFile(lr, function(err, data) {
+function readSong(song) {
+  fs.readFile('through-heavens-eyes_txt.txt', function(err, data) {
     var array = data.toString().split('\n');
 
-    console.log(lr);
-
+    for (var i = 0; i < array.length; i++) {
+      printRandomColor(array[i]);
+    }
 
     function printRandomColor(string) {
       var randomNumber = Math.floor(Math.random() * 10),
           possibleColors = [
             'red', 'green', 'blue', 'white', 'cyan', 'magenta', 'red', 'green', 'blue', 'red'
           ];
-          console.log(lr);
 
       console.log(colors[possibleColors[randomNumber]](string));
       // dynamic version of: console.log(colors.red(string))
-    }
-
-    for (var i = 0; i < array.length; i++) {
-      printRandomColor(array[i]);
     }
   });
 }
@@ -38,3 +30,5 @@ function readSong(lr) {
 for (var i = 2; i < process.argv.length; i++) {
   readSong(process.argv[i]);
 }
+
+console.log(readSong());
