@@ -1,7 +1,5 @@
 var colors = require('colors');
 
-// var line = process.argv[i];
-
 var patrickPoem = [
   "I like to feed the spacemen swimming in the sky.",
   "They smile as they dive for the morsels I throw.",
@@ -10,16 +8,10 @@ var patrickPoem = [
 ];
 
 function makeRainbows(poem) {
-  
-  console.log(colors.red(poem[0]));
-  console.log(colors.blue(poem[1]));
-  console.log(colors.random(poem[2]));
-  console.log(colors.white(poem[3]));
-
-
+  for (var i = 0; i < poem.length; i++) {
+    console.log(colors.random(poem[i]));
+  }
 }
 
 
 setInterval(makeRainbows, 1000, patrickPoem);
-
-//

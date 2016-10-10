@@ -1,22 +1,24 @@
 {
   "name": "rainbows",
   "version": "1.0.0",
-  "description": "app to write in rainbow colors",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JessicaML/rainbows.git"
+    "url": "git+https://github.com/izelnakri/rainbows.git"
   },
-  "author": "Jess Leach",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JessicaML/rainbows/issues"
+    "url": "https://github.com/izelnakri/rainbows/issues"
   },
-  "homepage": "https://github.com/JessicaML/rainbows#readme",
+  "homepage": "https://github.com/izelnakri/rainbows#readme",
   "dependencies": {
-    "colors": "^1.1.2"
+    "chalk": "^1.1.3",
+    "colors": "^0.11.3",
+    "line-by-line": "^0.1.5"
   }
 }
